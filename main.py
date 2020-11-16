@@ -5,11 +5,11 @@ import discord
 # import roll
 from discord.ext import commands
 
-# from dotenv import load_dotenv,find_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
-TOKEN = ""
+TOKEN = os.getenv("SECRET_TOKEN")
 
 rollyBot = commands.Bot(command_prefix='!')
 
