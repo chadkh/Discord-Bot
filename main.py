@@ -1,10 +1,10 @@
 #main.py
-import os
-# import random
-import discord
-# import roll
-from discord.ext import commands
 
+from bannerClass.BaseBanner import BaseBanner
+
+import os
+import discord
+from discord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -30,7 +30,11 @@ async def multi_response(ctx,banner_type:str):
 async def on_message(ctx, banner_type: str):
     # sim = roll.Simulator()
     # sim.single_summoning(banner_type)
-    await ctx.send("Setting Up!")
+    test = BaseBanner()
+    newList = test.genProbabilityRange(5,3,1)
+    # print(len(newList))
+    print(test.genRandomNumber(newList))
+    await ctx.send(newList)
     
 
 rollyBot.run(TOKEN)

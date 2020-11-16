@@ -1,2 +1,3 @@
 # Test-Repo
-running another test
+Developing a Discord Bot! 
+
