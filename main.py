@@ -9,7 +9,7 @@ from discord.ext import commands
 
 # load_dotenv()
 
-TOKEN = 'Nzc1NDg5MjA2ODk0MDY3Nzg0.X6nEmg.lEc3wOO9PwstVhH7HtvLD52uJZI'
+TOKEN = ""
 
 rollyBot = commands.Bot(command_prefix='!')
 
