@@ -41,7 +41,6 @@ print(makeCharList())
 def makeWeaponList():
     toRead = open('genshinweapondata.txt',mode='r')
     fullStr = ""
-    weaponId = 0
     currentId = ""
     
     for x in toRead:
