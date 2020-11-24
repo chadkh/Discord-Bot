@@ -1,0 +1,361 @@
+[
+    {
+        "name": "Keqing",
+        "rating": "5",
+        "id": "11511",
+        "vision": "Electro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Mona",
+        "rating": "5",
+        "id": "21522",
+        "vision": "Hydro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Qiqi",
+        "rating": "5",
+        "id": "31541",
+        "vision": "Cryo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Diluc",
+        "rating": "5",
+        "id": "41533",
+        "vision": "Pyro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Jean",
+        "rating": "5",
+        "id": "51561",
+        "vision": "Anemo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Klee",
+        "rating": "5",
+        "id": "61532",
+        "vision": "Pyro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Venti",
+        "rating": "5",
+        "id": "71564",
+        "vision": "Anemo",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Tartaglia",
+        "rating": "5",
+        "id": "81524",
+        "vision": "Hydro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Sucrose",
+        "rating": "4",
+        "id": "91462",
+        "vision": "Anemo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Chongyun",
+        "rating": "4",
+        "id": "101443",
+        "vision": "Cryo",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Noelle",
+        "rating": "4",
+        "id": "111453",
+        "vision": "Geo",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Bennett",
+        "rating": "4",
+        "id": "121431",
+        "vision": "Pyro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Fischl",
+        "rating": "4",
+        "id": "131414",
+        "vision": "Electro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Ningguang",
+        "rating": "4",
+        "id": "141452",
+        "vision": "Geo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Xingqiu",
+        "rating": "4",
+        "id": "151421",
+        "vision": "Hydro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Beidou",
+        "rating": "4",
+        "id": "161413",
+        "vision": "Electro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Xiangling",
+        "rating": "4",
+        "id": "171435",
+        "vision": "Pyro",
+        "weapon": "Polearm"
+    },
+    {
+        "name": "Amber",
+        "rating": "4",
+        "id": "181434",
+        "vision": "Pyro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Razor",
+        "rating": "4",
+        "id": "191413",
+        "vision": "Electro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Kaeya",
+        "rating": "4",
+        "id": "201441",
+        "vision": "Cryo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Barbara",
+        "rating": "4",
+        "id": "211422",
+        "vision": "Hydro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Lisa",
+        "rating": "4",
+        "id": "221412",
+        "vision": "Electro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Amos' Bow",
+        "rating": "5",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "Skyward Harp",
+        "rating": "5",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "Skyward Atlas",
+        "rating": "5",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "Skyward Spine",
+        "rating": "5",
+        "weaponType": "Polearm"
+    },
+    {
+        "name": "Skyward Pride",
+        "rating": "5",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "Skyward Blade",
+        "rating": "5",
+        "weaponType": "Sword"
+    },
+    {
+        "name": "Lost Prayer to the Sacred Winds",
+        "rating": "5",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "Primordial Jade Winged-Spear",
+        "rating": "5",
+        "weaponType": "Polearm"
+    },
+    {
+        "name": "Aquila Favonia",
+        "rating": "5",
+        "weaponType": "Sword"
+    },
+    {
+        "name": "Wolf's Gravestone",
+        "rating": "5",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "Rust",
+        "rating": "4",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "Sacrificial Bow",
+        "rating": "4",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "The Stringless",
+        "rating": "4",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "Favonius Warbow",
+        "rating": "4",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "Eye of Perception",
+        "rating": "4",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "Sacrificial Fragments",
+        "rating": "4",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "The Widsith",
+        "rating": "4",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "Favonius Codex",
+        "rating": "4",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "Favonius Lance",
+        "rating": "4",
+        "weaponType": "Polearm"
+    },
+    {
+        "name": "Dragon's Bane",
+        "rating": "4",
+        "weaponType": "Polearm"
+    },
+    {
+        "name": "Rainslasher",
+        "rating": "4",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "Sacrificial Greatsword",
+        "rating": "4",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "The Bell",
+        "rating": "4",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "Favonius Greatsword",
+        "rating": "4",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "Lion's Roar",
+        "rating": "4",
+        "weaponType": "Sword"
+    },
+    {
+        "name": "Sacrificial Sword",
+        "rating": "4",
+        "weaponType": "Sword"
+    },
+    {
+        "name": "The Flute",
+        "rating": "4",
+        "weaponType": "Sword"
+    },
+    {
+        "name": "Favonius Sword",
+        "rating": "4",
+        "weaponType": "Sword"
+    },
+    {
+        "name": "Slingshot",
+        "rating": "3",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "Sharpshooter's Oath",
+        "rating": "3",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "Raven Bow",
+        "rating": "3",
+        "weaponType": "Bow"
+    },
+    {
+        "name": "Emerald Orb",
+        "rating": "3",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "Thrilling Tales of Dragon Slayers",
+        "rating": "3",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "Magic Guide",
+        "rating": "3",
+        "weaponType": "Catalyst"
+    },
+    {
+        "name": "Black Tassel",
+        "rating": "3",
+        "weaponType": "Polearm"
+    },
+    {
+        "name": "Debate Club",
+        "rating": "3",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "Bloodtainted Greatsword",
+        "rating": "3",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "Ferrous Shadow",
+        "rating": "3",
+        "weaponType": "Claymore"
+    },
+    {
+        "name": "Skyrider Sword",
+        "rating": "3",
+        "weaponType": "Sword"
+    },
+    {
+        "name": "Harbinger of Dawn",
+        "rating": "3",
+        "weaponType": "Sword"
+    },
+    {
+        "name": "Cool Steel",
+        "rating": "3",
+        "weaponType": "Sword"
+    }
+]
