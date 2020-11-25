@@ -50,6 +50,7 @@ async def registerUser(ctx):
 
     #TODO
     userList[ctx.message.author.id] = 1#class that encapsulates all banners
+    
     await ctx.send(f"{ctx.message.author.name} has successfully registered!")
     # await ctx.send(f"User ID: {ctx.message.author.id}")
     

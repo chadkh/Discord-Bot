@@ -1,6 +1,10 @@
+#
+#DEPRECATED
+#
 #Initial Idea
 #Lots of error checking, can be split into more modules for easier clarity
 #roll.py
+
 import random
 #counters for summons from event,permanent, and weapon banners
 #when you get to the value it becomes a chance to be either weapon or character 
