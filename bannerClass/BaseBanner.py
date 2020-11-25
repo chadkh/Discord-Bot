@@ -12,9 +12,6 @@ class BaseBanner:
     # def getChance(self):
     #     pass
 
-    # #maintain a list of possible drops in a banner
-    # def getPossibleDrops(self):
-    #     pass
 
     #generates the probability range for a banner
     def genProbabilityRange(self,b:int,p:int,o:int):
@@ -35,13 +32,8 @@ class BaseBanner:
 
     #returns an iterable with filtered condition
     def refine(self,iterable,rating):
-        # print(iterable)
-        filtered = filter(lambda x: x['rating'] == str(rating),iterable)
-        # for x in filtered:
-        #     print(x)
-        return filtered
-        
-
+        return filter(lambda x: x['rating'] == str(rating),iterable)
+       
     def retrieveDropList(self,path:str):
         data = open(path,'r')
         jsonData = json.load(data)

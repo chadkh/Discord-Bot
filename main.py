@@ -29,16 +29,16 @@ async def multi_response(ctx,banner_type:str):
     test = wlib.wanderLustInvocationBanner()
     await ctx.send(test.roll(10))
 
-@rollyBot.command(name='roll')
-async def on_message(ctx, banner_type: str):
-    pass
-    # # sim = roll.Simulator()
-    # # sim.single_summoning(banner_type)
-    # test = BaseBanner()
-    # newList = test.genProbabilityRange(5,3,1)
-    # # print(len(newList))
-    # print(test.genRandomNumber(newList))
-    # await ctx.send(newList)
+# @rollyBot.command(name='roll')
+# async def on_message(ctx, banner_type: str):
+#     pass
+#     # # sim = roll.Simulator()
+#     # # sim.single_summoning(banner_type)
+#     # test = BaseBanner()
+#     # newList = test.genProbabilityRange(5,3,1)
+#     # # print(len(newList))
+#     # print(test.genRandomNumber(newList))
+#     # await ctx.send(newList)
     
 
 rollyBot.run(TOKEN)
