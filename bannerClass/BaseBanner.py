@@ -33,8 +33,14 @@ class BaseBanner:
     def scramble(self,arr:list):
         random.shuffle(arr)
 
-    def filter(self,):
-        pass
+    #returns an iterable with filtered condition
+    def refine(self,iterable,rating):
+        # print(iterable)
+        filtered = filter(lambda x: x['rating'] == str(rating),iterable)
+        # for x in filtered:
+        #     print(x)
+        return filtered
+        
 
     def retrieveDropList(self,path:str):
         data = open(path,'r')

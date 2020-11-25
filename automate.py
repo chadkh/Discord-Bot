@@ -77,10 +77,16 @@ def makeWeaponList():
 
 
 if __name__ == "__main__":
-    # makeCharList()
-    # makeWeaponList()
+    # # makeCharList()
+    # # makeWeaponList()
     data = open(".\\data\\wanderLustInvocationDrops.json",'r')
     jsonData = json.load(data)
     #list of dictionaries
     #jsonData = [dict{}]
-    print())
+    # for x in jsonData:
+    #     if x['rating'] == "5":
+    #         print(x)
+    filtered = filter(lambda x: x['rating'] == str(5),jsonData)
+    for x in filtered:
+        print(x)
+    # print('5' == str(5))
