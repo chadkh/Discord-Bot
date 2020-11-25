@@ -1,7 +1,7 @@
 #BaseBanner.py
 #Implements the Base Banner Gacha attributes
 import random
-
+import json
 class BaseBanner:
     def __init__(self):
         #have a list of drops according to banner
@@ -32,3 +32,12 @@ class BaseBanner:
     #rearrange the array in a random order
     def scramble(self,arr:list):
         random.shuffle(arr)
+
+    def filter(self,):
+        pass
+
+    def retrieveDropList(self,path:str):
+        data = open(path,'r')
+        jsonData = json.load(data)
+        data.close()
+        return jsonData

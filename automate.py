@@ -75,5 +75,12 @@ def makeWeaponList():
     # return fullStr
 
 
-makeCharList()
-makeWeaponList()
+
+if __name__ == "__main__":
+    # makeCharList()
+    # makeWeaponList()
+    data = open(".\\data\\wanderLustInvocationDrops.json",'r')
+    jsonData = json.load(data)
+    #list of dictionaries
+    #jsonData = [dict{}]
+    print())
