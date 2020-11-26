@@ -74,6 +74,18 @@ def makeWeaponList():
         json.dump(weapon_list,outfile)
     # return fullStr
 
+#option of adding a character or a weapon
+#input
+#if input is character create a banner with standard drops + x characters
+#else create banner with standard drops + x weapons
+
+def createBanner():
+    charType = input("Are you adding a character or weapon? (c/w): ")
+    bannerName = input("What is the name of the banner?: ")
+    if charType == "c":
+    elif charType == "w":
+    else:
+        print("you must pick either character or a weapon")   
 
 
 if __name__ == "__main__":
