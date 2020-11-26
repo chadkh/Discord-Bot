@@ -1,4 +1,4 @@
-from .BaseBanner import BaseBanner
+from bannerClass.BaseBanner import BaseBanner
 
 FOUR_STAR_PITY_CAP = 10
 FIVE_STAR_PITY_CAP = 90
