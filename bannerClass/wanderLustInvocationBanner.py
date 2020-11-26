@@ -35,6 +35,8 @@ class wanderLustInvocationBanner(BaseBanner):
         return self.message(itemList)
 
     def checkPity(self,rating:int):
+        print(f"Four Star Pity Count: {self.fourStarPity}")
+        print(f"Five Star Pity Count: {self.fiveStarPity}")
         if self.fourStarPity % FOUR_STAR_PITY_CAP == 0 or rating == 4:
             self.resetFourStarPity()
             return 4

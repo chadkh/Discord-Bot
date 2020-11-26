@@ -11,7 +11,12 @@ load_dotenv()
 
 TOKEN = os.getenv("SECRET_TOKEN")
 
-rollyBot = commands.Bot(command_prefix='!')
+#currently used to maintain userData
+userList = {}
+
+
+
+rollyBot = commands.Bot(command_prefix='!',help_command=None)
 
 @rollyBot.event
 async def on_ready():
@@ -20,7 +25,7 @@ async def on_ready():
 # @rollyBot.event
 # async def on_message(msg):
 
-userList = {}
+
 
 #check decorator confirming if user is registered
 def isRegisteredUser():
@@ -45,30 +50,34 @@ def isRegisteredUser():
 # async def helpList(ctx):
 #     await ctx.send("Currently Supported Commands: !register,\n!single\n,!multi\n More Coming Soon...")
 
+@rollyBot.command(name='help')
+async def helpCommand(ctx):
+    await ctx.send("There are currently no commands!")
+
 @rollyBot.command(name='register')
 async def registerUser(ctx):
     #initializes user data with banner objects
     await ctx.send(f"Registering User {ctx.message.author.name}..")
 
     #TODO
-    userList[ctx.message.author.id] = 1#class that encapsulates all banners
+    userList[ctx.message.author.id] = wlib.wanderLustInvocationBanner()#class that encapsulates all banners
+    # await ctx.send(f"List of Current Users: {userList}")
 
-    await ctx.send(f"{ctx.message.author.name} has successfully registered!")
+    await ctx.send(f"{ctx.message.author.name} can now go broke!")
     # await ctx.send(f"User ID: {ctx.message.author.id}")
     
 
 @rollyBot.command(name='single')
 @isRegisteredUser()
 async def single_response(ctx,banner_type:str):
-    test = wlib.wanderLustInvocationBanner()
 
-    await ctx.send(test.roll(1))
+    await ctx.send(userList[ctx.message.author.id].roll(1))
 
 @rollyBot.command(name='multi')
 @isRegisteredUser()
 async def multi_response(ctx,banner_type:str):
-    test = wlib.wanderLustInvocationBanner()
-    await ctx.send(test.roll(10))
+    
+    await ctx.send(userList[ctx.message.author.id].roll(10))
 
 
 rollyBot.run(TOKEN)
