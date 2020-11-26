@@ -34,27 +34,6 @@
         "weapon": "Sword"
     },
     {
-        "name": "Klee",
-        "rating": "5",
-        "id": "61532",
-        "vision": "Pyro",
-        "weapon": "Catalyst"
-    },
-    {
-        "name": "Venti",
-        "rating": "5",
-        "id": "71564",
-        "vision": "Anemo",
-        "weapon": "Bow"
-    },
-    {
-        "name": "Tartaglia",
-        "rating": "5",
-        "id": "81524",
-        "vision": "Hydro",
-        "weapon": "Bow"
-    },
-    {
         "name": "Sucrose",
         "rating": "4",
         "id": "91462",
