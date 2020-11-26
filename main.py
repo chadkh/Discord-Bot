@@ -16,7 +16,7 @@ userList = {}
 
 
 
-rollyBot = commands.Bot(command_prefix='!',help_command=None)
+rollyBot = commands.Bot(command_prefix='!')
 
 @rollyBot.event
 async def on_ready():
@@ -28,15 +28,11 @@ async def on_ready():
 
 
 #check decorator confirming if user is registered
-def isRegisteredUser():
-    async def predicate(ctx):
-        if(ctx.message.author.id not in userList):
-            await ctx.send("You must register before rolling!\n" +
-                            "Use the command: !register" )
-        return ctx.message.author.id in userList
-        # return ctx.message.author.id in userList
-    # await ctx.send("greetings")
-    return commands.check(predicate)
+async def isRegisteredUser(ctx):
+    if(ctx.message.author.id not in userList):
+        await ctx.send("You must register before rolling!\n" +
+                        "Use the command: !register" )
+    return ctx.message.author.id in userList
 
 
 ####
@@ -46,13 +42,6 @@ def isRegisteredUser():
 ####
 
 
-# @rollyBot.command(name='help')
-# async def helpList(ctx):
-#     await ctx.send("Currently Supported Commands: !register,\n!single\n,!multi\n More Coming Soon...")
-
-@rollyBot.command(name='help')
-async def helpCommand(ctx):
-    await ctx.send("There are currently no commands!")
 
 @rollyBot.command(name='register')
 async def registerUser(ctx):
@@ -68,16 +57,18 @@ async def registerUser(ctx):
     
 
 @rollyBot.command(name='single')
-@isRegisteredUser()
 async def single_response(ctx,banner_type:str):
+    if  await isRegisteredUser(ctx):
+        await ctx.send(userList[ctx.message.author.id].roll(1))
 
-    await ctx.send(userList[ctx.message.author.id].roll(1))
+        
 
 @rollyBot.command(name='multi')
-@isRegisteredUser()
 async def multi_response(ctx,banner_type:str):
     
-    await ctx.send(userList[ctx.message.author.id].roll(10))
+    if await isRegisteredUser(ctx):
+        await ctx.send(userList[ctx.message.author.id].roll(10))
+
 
 
 rollyBot.run(TOKEN)
