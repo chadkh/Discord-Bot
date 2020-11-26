@@ -74,19 +74,31 @@ def makeWeaponList():
         json.dump(weapon_list,outfile)
     # return fullStr
 
+def makeBannerList():
+
+    banner_list = {'childe':'childe', 'farewell':'childe', 'fos':'childe',
+        'klee':'klee', 'sparkling':'klee', 'ss':'klee',
+        'venti':'venti', 'ballad':'venti', 'big':'venti',
+        'wanderlust':'standard', 'wli':'standard', 'standard':'standard', 'perm':'standard',
+        'epitome':'epitome','ei':'epitome'}
+
+    with open(".\\data\\bannerList.json","w") as outfile:
+        json.dump(banner_list,outfile)
 
 
 if __name__ == "__main__":
     # # makeCharList()
     # # makeWeaponList()
-    data = open(".\\data\\wanderLustInvocationDrops.json",'r')
-    jsonData = json.load(data)
+    makeBannerList()
+    #data = open(".\\data\\wanderLustInvocationDrops.json",'r')
+    #jsonData = json.load(data)
     #list of dictionaries
     #jsonData = [dict{}]
     # for x in jsonData:
     #     if x['rating'] == "5":
     #         print(x)
-    filtered = filter(lambda x: x['rating'] == str(5),jsonData)
-    for x in filtered:
-        print(x)
+    #filtered = filter(lambda x: x['rating'] == str(5),jsonData)
+    #for x in filtered:
+    #    print(x)
     # print('5' == str(5))
+

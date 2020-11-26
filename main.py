@@ -2,6 +2,7 @@
 
 from bannerClass import wanderLustInvocationBanner as wlib
 
+import json
 import os
 import discord
 from discord.ext import commands
@@ -10,9 +11,22 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN = os.getenv("SECRET_TOKEN")
+BANNER_LIST = '.\\data\\bannerList.json'
 
 #currently used to maintain userData
 userList = {}
+
+#holds all event banner names
+banner_list = {}
+
+#reads bannerlist dictionary from JSON
+with open(BANNER_LIST) as out_file:
+    print(f"\nReading {BANNER_LIST} to banner_list dict")
+    banner_list = json.load(out_file)
+    #print(banner_list.items())
+    out_file.close()
+
+
 
 
 
@@ -39,27 +53,19 @@ async def isBannerTypeValid(ctx,banner_type:str):
     if banner_type is None:
         await ctx.send("Please enter a banner name")
         return False
-    elif banner_type != 'valid':#compares banner_type string to list of valid banner strings
-    #elif checkBannerType(ctx,banner_type):
+    #elif banner_type != 'valid':#compares banner_type string to list of valid banner strings
+    elif banner_type not in banner_list:
         await ctx.send("Banner name invalid")
         return False
     else:
         return True
 
-##TODO
-#create dict that contains multiple inputtable names for banner selection on rolls
-#example:
-# venti: ballad(banner class)
-# ballad: ballad
-# bigd: ballad
-# wanderlust: standard
-# wli: standard
-# perm: standard
 
+#dummy command for simulator object to receive banner type and roll specific banner
 
-#async def checkBannerType(ctx,banner_type:str):
-
-
+async def rollSelectedBanner(ctx,banner_type:str,count:int):
+    #simulator_roll(ctx,banner_type)
+    await ctx.send(f"You rolled the {banner_type} banner {count} time(s)!")
     
 
 ####
@@ -67,7 +73,6 @@ async def isBannerTypeValid(ctx,banner_type:str):
 #### COMMANDS
 ####
 ####
-
 
 
 @rollyBot.command(name='register')
@@ -83,12 +88,16 @@ async def registerUser(ctx):
     # await ctx.send(f"User ID: {ctx.message.author.id}")
     
 
+
+
+
 @rollyBot.command(name='single')
 async def single_response(ctx,banner_type:str=None):
     if await isRegisteredUser(ctx):
         if await isBannerTypeValid(ctx,banner_type):
+            await rollSelectedBanner(ctx,banner_type,1)
             await ctx.send(userList[ctx.message.author.id].roll(1))
-
+            
 
 
 
@@ -97,6 +106,7 @@ async def single_response(ctx,banner_type:str=None):
 async def multi_response(ctx,banner_type:str=None):
     if await isRegisteredUser(ctx):
         if await isBannerTypeValid(ctx,banner_type):
+            await rollSelectedBanner(ctx,banner_type,10)
             await ctx.send(userList[ctx.message.author.id].roll(10))
 
 
