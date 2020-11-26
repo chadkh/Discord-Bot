@@ -53,11 +53,11 @@ def makeCharList():
 
 def makeWeaponList():
     toRead = open('.\\data\\weapondata',mode='r')
-    fullStr = ""
+    # fullStr = ""
     currentId = ""
     weapon_list = []
     for x in toRead:
-        string = ""
+        # string = ""
         x = x.rstrip()
         weapon_data = {}
         if len(x) == 1:
