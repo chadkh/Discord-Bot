@@ -34,6 +34,18 @@ async def isRegisteredUser(ctx):
                         "Use the command: !register" )
     return ctx.message.author.id in userList
 
+#check banner type and send error string if invalid
+async def checkBannerType(ctx,banner_type:str):
+        if banner_type is None:
+            await ctx.send("Please enter a banner name")
+            return False
+
+        elif banner_type != 'valid':#compares banner_type string to list of valid banner strings
+            await ctx.send("Banner name invalid")
+            return False
+
+        else:
+            return True
 
 ####
 ####
@@ -57,17 +69,22 @@ async def registerUser(ctx):
     
 
 @rollyBot.command(name='single')
-async def single_response(ctx,banner_type:str):
+async def single_response(ctx,banner_type:str=None):
     if  await isRegisteredUser(ctx):
-        await ctx.send(userList[ctx.message.author.id].roll(1))
+        if await checkBannerType(ctx,banner_type):
+            await ctx.send(userList[ctx.message.author.id].roll(1))
 
-        
+
+
+
+
+    
 
 @rollyBot.command(name='multi')
-async def multi_response(ctx,banner_type:str):
-    
+async def multi_response(ctx,banner_type:str=None):
     if await isRegisteredUser(ctx):
-        await ctx.send(userList[ctx.message.author.id].roll(10))
+        if await checkBannerType(ctx,banner_type):
+            await ctx.send(userList[ctx.message.author.id].roll(10))
 
 
 
