@@ -19,6 +19,7 @@ class wanderLustInvocationBanner(BaseBanner):
         itemList = []
         for x in range(numRolls):
             #getRandomValue from the chanceList
+            #could change to either scramble list once per roll or shuffle once and base it off seed (more ideal for 10-pulls?)
             self.scramble(self.chanceList)
             randomValue = self.chanceList[self.genRandomNumber(self.chanceList)] #get a random element in this list (getting the rating)
             self.addToPity()
