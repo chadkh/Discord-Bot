@@ -35,17 +35,32 @@ async def isRegisteredUser(ctx):
     return ctx.message.author.id in userList
 
 #check banner type and send error string if invalid
-async def checkBannerType(ctx,banner_type:str):
-        if banner_type is None:
-            await ctx.send("Please enter a banner name")
-            return False
+async def isBannerTypeValid(ctx,banner_type:str):
+    if banner_type is None:
+        await ctx.send("Please enter a banner name")
+        return False
+    elif banner_type != 'valid':#compares banner_type string to list of valid banner strings
+    #elif checkBannerType(ctx,banner_type):
+        await ctx.send("Banner name invalid")
+        return False
+    else:
+        return True
 
-        elif banner_type != 'valid':#compares banner_type string to list of valid banner strings
-            await ctx.send("Banner name invalid")
-            return False
+##TODO
+#create dict that contains multiple inputtable names for banner selection on rolls
+#example:
+# venti: ballad(banner class)
+# ballad: ballad
+# bigd: ballad
+# wanderlust: standard
+# wli: standard
+# perm: standard
 
-        else:
-            return True
+
+#async def checkBannerType(ctx,banner_type:str):
+
+
+    
 
 ####
 ####
@@ -70,20 +85,18 @@ async def registerUser(ctx):
 
 @rollyBot.command(name='single')
 async def single_response(ctx,banner_type:str=None):
-    if  await isRegisteredUser(ctx):
-        if await checkBannerType(ctx,banner_type):
+    if await isRegisteredUser(ctx):
+        if await isBannerTypeValid(ctx,banner_type):
             await ctx.send(userList[ctx.message.author.id].roll(1))
 
 
 
 
 
-    
-
 @rollyBot.command(name='multi')
 async def multi_response(ctx,banner_type:str=None):
     if await isRegisteredUser(ctx):
-        if await checkBannerType(ctx,banner_type):
+        if await isBannerTypeValid(ctx,banner_type):
             await ctx.send(userList[ctx.message.author.id].roll(10))
 
 
